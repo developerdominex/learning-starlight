@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teaching Starlight SLMD → Markdown</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #0f0f0f;
+      color: #eaeaea;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #00ffff;
+    }
+
+    pre, code {
+      background: #111;
+      color: #eaeaea;
+      padding: 10px;
+      display: block;
+      overflow-x: auto;
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      background: #111;
+      color: #eaeaea;
+      border: 1px solid #333;
+      padding: 10px;
+      margin-bottom: 15px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 8px 16px;
+      background: #222;
+      color: #fff;
+      border: 1px solid #444;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Starlight SLMD → Markdown Tutorial</h1>
+
+<p>Welcome! This guide shows how to write <strong>.slmd</strong> files and convert them to ready-to-use Markdown using the Starlight MD Converter.</p>
+
+<h2>1. Writing SLMD</h2>
+
+<p>SLMD uses simple tags to structure content, similar to HTML but simplified:</p>
+
+<pre>
+<big1>Title of Your Document</big1>
+<bold>Bold text here</bold>
+<italic>Italic text here</italic>
+<code>Inline code here</code>
+
+<color red>Colored text here</color>
+<link https://example.com>Example Link</link>
+
+<ul>
+<li>List item 1</li>
+<li>List item 2</li>
+<li>List item 3</li>
+</ul>
+
+<table>
+<tr>
+<td>Header 1</td>
+<td>Header 2</td>
+</tr>
+<tr>
+<td>Row 1, Col 1</td>
+<td>Row 1, Col 2</td>
+</tr>
+</table>
+</pre>
+
+<p>Save this content in a file with the extension <strong>.slmd</strong>, for example: <em>example.slmd</em></p>
+
+<h2>2. Converting SLMD to Markdown</h2>
+
+<p>Use the Starlight MD Converter package. Example program in <strong>program.sl</strong>:</p>
+
+<pre>
+import { convertFile } from "starlight-mdconverter"
+
+sldeploy "=== SLMD to Markdown Converter ==="
+
+let inputFile = ask("Enter path to your .slmd file:")
+let outputFile = ask("Enter path for output .md file:")
+
+convertFile(inputFile, outputFile)
+
+sldeploy "✅ Conversion complete! Markdown file saved."
+</pre>
+
+<h2>3. Output</h2>
+
+<p>The converter will transform your SLMD tags into standard Markdown. For example:</p>
+
+<pre>
+<big1>My Document</big1>
+<bold>Important text</bold>
+<link https://example.com>Click here</link>
+</pre>
+
+<p>Will be converted to:</p>
+
+<pre>
+# My Document
+**Important text**
+[Click here](https://example.com)
+</pre>
+
+<h2>4. Tips</h2>
+<ul>
+<li>Use <code>&lt;big1&gt;</code>, <code>&lt;big2&gt;</code>, <code>&lt;big3&gt;</code> for headings.</li>
+<li>Use <code>&lt;bold&gt;</code>, <code>&lt;italic&gt;</code>, <code>&lt;code&gt;</code> for text styling.</li>
+<li>Use <code>&lt;color colorname&gt;</code> to indicate colored text (Markdown fallback will show color name).</li>
+<li>Use <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> for lists.</li>
+<li>Use <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code> for tables.</li>
+</ul>
+
+</body>
+</html>
