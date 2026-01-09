@@ -1,198 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Starlight Packages</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fefefe;
-    margin: 0;
-    padding: 2rem;
-    color: #222;
-  }
-  h1, h2 {
-    color: #0366d6;
-  }
-  .package-list {
-    margin-top: 1rem;
-  }
-  .package {
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: #fafafa;
-  }
-  .package h3 {
-    margin: 0 0 0.5rem 0;
-  }
-  .install {
-    background: #0366d6;
-    color: white;
-    padding: 0.3rem 0.6rem;
-    border-radius: 3px;
-    font-family: monospace;
-    display: inline-block;
-    margin-top: 0.3rem;
-  }
-  .inactive {
-    color: red;
-    font-weight: bold;
-  }
-  .hub {
-    margin-top: 3rem;
-    padding: 1rem;
-    border-top: 2px solid #ddd;
-  }
-  a {
-    color: #0366d6;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starlight Programming Language</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #222;
+    }
+    header {
+      background: #4f46e5;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #4f46e5;
+    }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 1em;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    code {
+      font-family: "Courier New", monospace;
+    }
+    section {
+      margin-bottom: 2em;
+    }
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Starlight Packages by developerdominex</h1>
-<p>Use these packages for the <strong>Starlight programming language</strong>. Install via <code>npm install &lt;package-name&gt;</code>.</p>
+<header>
+  <h1>Starlight Programming Language</h1>
+  <p>Developed by Dominex Macedon</p>
+</header>
 
-<div class="package-list">
-  <div class="package">
-    <h3>starlight-cli</h3>
-    <p>Starlight Programming Language CLI</p>
-    <span class="install">npm install starlight-cli@latest</span>
-  </div>
+<main>
+  <section>
+    <h2>Installation</h2>
+    <p>Install the Starlight CLI globally using npm:</p>
+    <pre><code>npm install -g starlight-cli@latest</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-color</h3>
-    <p>Starlight Programming Language with Color Support</p>
-    <span class="install">npm install starlight-color@latest</span>
-  </div>
+  <section>
+    <h2>Getting Started</h2>
+    <p>Starlight is a Python/JavaScript hybrid scripting language. Here's a simple example:</p>
+    <pre><code>// Hello World in Starlight
+let greeting = "Hello, Starlight!";
+sldeploy(greeting);</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-math</h3>
-    <p>Math utilities for Starlight (arithmetic, trigonometry, vectors, matrices)</p>
-    <span class="install">npm install starlight-math@latest</span>
-  </div>
+  <section>
+    <h2>Variables</h2>
+    <p>Declare variables using <code>let</code> and optionally assign values:</p>
+    <pre><code>let x = 10;
+let name = "Dominex";
+let flag = true;</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-time</h3>
-    <p>Time and Date utilities for Starlight</p>
-    <span class="install">npm install starlight-time@latest</span>
-  </div>
+  <section>
+    <h2>Functions</h2>
+    <p>Define regular and async functions:</p>
+    <pre><code>// Regular function
+func add(a, b) {
+  return a + b;
+}
 
-  <div class="package">
-    <h3>starlight-fs</h3>
-    <p>File system utilities for Starlight</p>
-    <span class="install">npm install starlight-fs@latest</span>
-  </div>
+// Async function
+async func fetchData(url) {
+  let response = await fetch(url);
+  return await response.json();
+}</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-api</h3>
-    <p>API utilities (GET, POST, headers, auth) for Starlight</p>
-    <span class="install">npm install starlight-api@latest</span>
-  </div>
+  <section>
+    <h2>Arrow Functions</h2>
+    <p>Starlight supports concise arrow function syntax:</p>
+    <pre><code>let square = x => x * x;
+sldeploy(square(5)); // 25</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-json</h3>
-    <p>JSON utilities for Starlight</p>
-    <span class="install">npm install starlight-json@latest</span>
-  </div>
+  <section>
+    <h2>Conditionals</h2>
+    <p>Supports <code>if</code>, <code>else if</code>, and <code>else</code>:</p>
+    <pre><code>let x = 15;
 
-  <div class="package">
-    <h3>starlight-env</h3>
-    <p>Environment variables utility for Starlight</p>
-    <span class="install">npm install starlight-env@latest</span>
-  </div>
+if x > 10 {
+  sldeploy("x is greater than 10");
+} else {
+  sldeploy("x is 10 or less");
+}</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-utils</h3>
-    <p>String, array, and object helpers for Starlight</p>
-    <span class="install">npm install starlight-utils@latest</span>
-  </div>
+  <section>
+    <h2>Loops</h2>
+    <p>Starlight has Python-style and C-style loops:</p>
+    <pre><code>// Python-style
+for let i in range(5) {
+  sldeploy(i);
+}
 
-  <div class="package">
-    <h3>starlight-crypto</h3>
-    <p>Cryptographic utilities for Starlight</p>
-    <span class="install">npm install starlight-crypto@latest</span>
-  </div>
+// C-style
+for (let i = 0; i < 5; i++) {
+  sldeploy(i);
+}
 
-  <div class="package">
-    <h3>starlight-path</h3>
-    <p>Path utilities for Starlight</p>
-    <span class="install">npm install starlight-path@latest</span>
-  </div>
+while x > 0 {
+  sldeploy(x);
+  x--;
+}</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-core</h3>
-    <p>Core Standard Library for Starlight</p>
-    <span class="install">npm install starlight-core@latest</span>
-  </div>
+  <section>
+    <h2>Special Statements</h2>
+    <p>Starlight includes:</p>
+    <ul>
+      <li><code>sldeploy</code> – Prints formatted output:</li>
+    </ul>
+    <pre><code>sldeploy { name: "Dominex", score: 100 }</code></pre>
+    <ul>
+      <li><code>doTrack</code> – Error handling (like try/catch):</li>
+    </ul>
+    <pre><code>do {
+  riskyOperation();
+} track {
+  sldeploy(error);
+}</code></pre>
+    <ul>
+      <li><code>ask</code> – Get user input:</li>
+    </ul>
+    <pre><code>let name = ask("Enter your name:");
+sldeploy("Hello " + name);</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-os</h3>
-    <p>OS utilities for Starlight</p>
-    <span class="install">npm install starlight-os@latest</span>
-  </div>
+  <section>
+    <h2>Imports</h2>
+    <p>Import modules using JavaScript-like syntax:</p>
+    <pre><code>import fs from "fs";
+import { readFile, writeFile as save } from "./utils.sl";
+import * as helpers from "./helpers.sl";</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-componentui</h3>
-    <p>Self-contained terminal UI utilities</p>
-    <span class="install">npm install starlight-componentui@latest</span>
-  </div>
+  <section>
+    <h2>Built-in Functions</h2>
+    <ul>
+      <li><code>len(obj)</code> – Returns length of string, array, or object keys</li>
+      <li><code>sldeploy(value)</code> – Prints a value</li>
+      <li><code>type(value)</code> – Returns type</li>
+      <li><code>keys(obj)</code>, <code>values(obj)</code> – Object keys and values</li>
+      <li><code>range(start, end, step)</code> – Creates array of numbers</li>
+      <li><code>ask(prompt)</code> – User input</li>
+      <li><code>num(value)</code> – Converts to number</li>
+      <li><code>str(value)</code> – Converts to string</li>
+      <li><code>fetch(url)</code>, <code>get(url)</code>, <code>post(url, data)</code> – HTTP requests</li>
+      <li><code>sleep(ms)</code> – Pause execution asynchronously</li>
+    </ul>
+  </section>
 
-  <div class="package">
-    <h3>starlight-dbjson</h3>
-    <p>Lightweight JSON database for Starlight</p>
-    <span class="install">npm install starlight-dbjson@latest</span>
-  </div>
+  <section>
+    <h2>Objects and Arrays</h2>
+    <pre><code>let arr = [1, 2, 3];
+let obj = { name: "Dominex", score: 100 };
+sldeploy(arr[0]); // 1
+sldeploy(obj.name); // Dominex</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-net</h3>
-    <p>Networking utilities for Starlight</p>
-    <span class="install">npm install starlight-net@latest</span>
-  </div>
+  <section>
+    <h2>Example Program</h2>
+    <pre><code>let scores = [10, 20, 30];
 
-  <div class="package">
-    <h3>starlight-uuid</h3>
-    <p>UUID generator for Starlight</p>
-    <span class="install">npm install starlight-uuid@latest</span>
-  </div>
+for let s in scores {
+  if s > 15 {
+    sldeploy(s + " is high!");
+  } else {
+    sldeploy(s + " is low!");
+  }
+}
 
-  <div class="package">
-    <h3>starlight-pdf</h3>
-    <p>PDF loader and image converter</p>
-    <span class="install">npm install starlight-pdf@latest</span>
-  </div>
+async func main() {
+  let data = await fetch("https://api.example.com/data");
+  sldeploy(data);
+}
 
-  <div class="package">
-    <h3>starlight-txt-to-pdf</h3>
-    <p>Convert TXT files to styled PDF</p>
-    <span class="install">npm install starlight-txt-to-pdf@latest</span>
-  </div>
+main();</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-removebg <span class="inactive">(inactive)</span></h3>
-    <p>Remove image backgrounds for Starlight</p>
-    <span class="install">npm install starlight-removebg@latest</span>
-  </div>
+  <section>
+    <h2>License & Author</h2>
+    <p>Developed by <strong>Dominex Macedon</strong>. For installation, use:</p>
+    <pre><code>npm install -g starlight-cli@latest</code></pre>
+  </section>
 
-  <div class="package">
-    <h3>starlight-test-tool</h3>
-    <p>General Starlight environment test</p>
-    <span class="install">npm install starlight-test-tool@latest</span>
-  </div>
-</div>
-
-<div class="hub">
-  <h2>Learning Hub for Starlight</h2>
-  <p>Learn the Starlight programming language and its server-side features:</p>
-  <ul>
-    <li><a href="https://starlight-lang.pages.dev/" target="_blank">Official Starlight Documentation</a></li>
-    <li>Explore async/await, modules, I/O, and built-in utilities like <code>sldeploy</code> and <code>ask()</code></li>
-    <li>Use the CLI: <code>starlight-cli &lt;file.sl&gt;</code></li>
-  </ul>
-</div>
-
+</main>
 </body>
 </html>
